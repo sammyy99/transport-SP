@@ -1,6 +1,6 @@
 // Menu.js
 import React from 'react';
-import { Routes, Route, Outlet } from 'react-router-dom';
+import { Routes, Route} from 'react-router-dom';
 import Masters from "./HeaderComponents/Masters";
 import Vouchers from "./HeaderComponents/Vouchers";
 import ACReports from "./HeaderComponents/ACReports";
