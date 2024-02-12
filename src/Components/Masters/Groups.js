@@ -2,8 +2,8 @@ import React from 'react'
 
 const Groups = () => {
   return (
-    <div>
-      
+    <div className='pt-28 px-10'>
+      Groups
     </div>
   )
 }
