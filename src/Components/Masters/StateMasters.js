@@ -1,12 +1,25 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { states } from "../../Constants/states";
 import { useDispatch, useSelector } from "react-redux";
 import { addAllStates, addState, removeState } from "../../Redux/statesSlice";
 
 const StateMasters = () => {
+
+  const reduxStates = useSelector((store)=>{return store.states?.states})
+  const [stateList, setStateList] = useState(states)
+
   const dispatch = useDispatch();
   const stateName = useRef(null)
   const stateCode = useRef(null)
+  const search = useRef(null)
+
+  const handlesearch = ()=>{
+    const searchedList = reduxStates.filter((s)=>{
+      return s.name.toLowerCase().includes(search.current.value.toLowerCase())
+    })
+    setStateList(searchedList);
+    console.log(searchedList)
+  }
 
   const stateAddAll = ()=>{
     dispatch(addAllStates(states))
@@ -24,7 +37,7 @@ const StateMasters = () => {
     stateAddAll()
   },[])
 
-  const reduxStates = useSelector((store)=>{return store.states?.states})
+ 
   if(!reduxStates) return;
 
   return (
@@ -41,17 +54,17 @@ const StateMasters = () => {
                 Code
               </th>
               <th className="sticky top-0 py-2 px-4 text-left bg-gray-700">
-                
+               <input onChange={()=>handlesearch()} ref={search} type="text" placeholder="Search here" className="py-1 px-2 rounded-lg text-black"></input>
               </th>
             </tr>
           </thead>
           {/* Table Body */}
           <tbody>
-            {reduxStates.map((name,index) => (
+            {!stateList ? null : stateList.map((name,index) => (
               <tr key={name.code} className="hover:bg-gray-100 border-b">
                 <td className="py-2 px-4">{name.name}</td>
                 <td className="py-2 px-4">{name.code}</td>
-                <td className="py-2 px-4">
+                <td className="py-2 px-4 pl-20">
                     <button className="bg-blue-200 px-4 py-1 rounded-md hover:bg-blue-300" value={index}>Edit</button>
                     <button onClick={()=>stateDelete(index)} className="hover:bg-red-400 p-1 rounded-md ml-3" value={index}>❌</button>
                 </td>

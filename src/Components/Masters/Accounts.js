@@ -2,75 +2,74 @@ import React from "react";
 
 const Accounts = () => {
   return (
-    <div className=" h-screen col-start-2 col-end-12">
-      <div className="pt-24 flex w-full justify-center text-2xl">
+    <div className=" h-screen col-span-12 px-16 overflow-scroll py-4">
+      <div className="pt-16 flex w-full justify-center text-2xl">
         Account Details
       </div>
 
 
       <div>
-        <div className="div1 flex space-x-8 mt-12">
+        <div className="flex space-x-10 mt-10">
           <div>
-            <label>A/C Type : </label>
-            <select>
+            <label className="mr-1">A/C Type : </label>
+            <select className="w-40 py-1 px-2 rounded-md shadow-md">
               <option>Transport</option>
               <option>Publisher</option>
             </select>
           </div>
 
-
           <div>
-            <label>Station : </label>
-            <select>
-              <option>Meerut</option>
-              <option>Agra</option>
-            </select>
-          </div>
-
-          <div>
-            <label>State : </label>
-            <select>
+            <label className="mr-1">State : </label>
+            <select className="w-40 py-1 px-2 rounded-md shadow-md">
               <option>UttarPradesh</option>
               <option>Punjab</option>
             </select>
           </div>
 
           <div>
-            <label>Location</label>
-            <input type="text" placeholder="Location"></input>
+            <label className="mr-1">Station : </label>
+            <select className="w-40 py-1 px-2 rounded-md shadow-md">
+              <option>Meerut</option>
+              <option>Agra</option>
+            </select>
+          </div>
+
+          <div>
+            <label className="mr-1">Location : </label>
+            <input className="w-40 py-1 px-2 rounded-md shadow-md" type="text" placeholder="Location"></input>
           </div>
         </div>
       </div>
 
 
-      <div className="mt-10 ">
-        <div className="mb-1">
-          <label>A/C Name : </label>
-          <input type="text" placeholder=""></input>
+      <div className="mt-8 w-4/12 ">
+        <div className="mb-1 w-full flex justify-between">
+          <label className="mr-1">A/C Name : </label>
+          <input  className="w-64 py-1 px-2 rounded-md shadow-md" type="text" placeholder=""></input>
         </div>
 
-        <div className="mb-1">
-          <label>Mailing Name : </label>
-          <input type="text" placeholder=""></input>
+        <div className="mb-1 w-full flex justify-between">
+          <label className="mr-1">Mailing Name : </label>
+          <input className="w-64 py-1 px-2 rounded-md shadow-md" type="text" placeholder=""></input>
         </div>
 
-        <div className="mb-1">
-          <label>Address : </label>
-          <textarea rows="2"></textarea>
+        <div className="mb-1 w-full flex justify-between">
+          <label className="mr-1" style={{ verticalAlign: 'top' }}>Address : </label>
+          <textarea className="w-64 py-1 px-2 rounded-md shadow-md" rows="2"></textarea>
         </div>
 
-        <div>
-          <label>GSTIN : </label>
-          <input type="text" placeholder=""></input>
+        <div className="w-full flex justify-between">
+          <label className="mr-1 ">GSTIN : </label>
+          <input className="w-64 py-1 px-2 rounded-md shadow-md" type="text" placeholder=""></input>
         </div>
       </div>
 
 
-      <div className="mt-10">
-        <div className="flex space-x-10">
-          <div>
-            <label>B/H/I/C : </label>
-            <select>
+      <div className="mt-8 w-6/12">
+        <div className="flex justify-between w-2/3">
+          <div className="">
+            <label className="mr-10">B/H/I/C : </label>
+            <select className="py-1 px-2 rounded-md shadow-md">
               <option>B</option>
               <option>H</option>
               <option>I</option>
@@ -78,135 +77,144 @@ const Accounts = () => {
             </select>
           </div>
           <div>
-            <label>Web Service Status : </label>
+            <label className="mr-1">Web Service Status : </label>
             <input type="checkbox"></input>
-          </div>
+          </div>  
         </div>
+
         <div className="mt-1">
-          <label>Date from : </label>
-          <input type="date"></input>
+          <label className="mr-6">Date from : </label>
+          <input className="py-1 px-2 rounded-md shadow-md" type="date"></input>
         </div>
-        <div className="flex space-x-8 mt-1">
+
+        <div className="flex mt-1 w-full justify-between">
           <div>
-            <label>Web from : </label>
-            <input type="date"></input>
+            <label className="mr-6">Web from : </label>
+            <input className="py-1 px-2 rounded-md shadow-md" type="date"></input>
           </div>
           <div>
-            <label>To date : </label>
-            <input type="date"></input>
+            <label className="mr-1">To date : </label>
+            <input className="py-1 px-2 rounded-md shadow-md" type="date"></input>
           </div>
         </div>
-        <div className="flex space-x-8 mt-1">
+
+        <div className="flex mt-1 w-full justify-between">
           <div className="">
-            <label>Licence from : </label>
-            <input type="date"></input>
+            <label className="mr-1">Licence from : </label>
+            <input className="py-1 px-2 rounded-md shadow-md" type="date"></input>
           </div>
           <div>
-            <label>Licence to : </label>
-            <input type="date"></input>
+            <label className="mr-1">Licence to : </label>
+            <input className="py-1 px-2 rounded-md shadow-md" type="date"></input>
           </div>
         </div>
       </div>
 
 
-      <div className="mt-10">
-        <div className="flex space-x-12 mb-1">
-          <div>
-            <label>Web Backup : </label>
+      <div className="mt-8 w-8/12 flex  justify-between">
+          <div className="">
+          <div className="flex justify-between w-full">
+            <label className="mr-1">Web Backup : </label>
             <input type="checkbox"></input>
           </div>
-          <div>
-            <label>Multiuser : </label>
+          <div className="flex justify-between w-full">
+            <label className="mr-1">Multiuser : </label>
             <input type="checkbox"></input>
           </div>
-          <div>
-            <label>Eway Bill : </label>
+          <div className="flex justify-between w-full">
+            <label className="mr-1">Eway Bill : </label>
             <input type="checkbox"></input>
           </div>
-          <div>
-            <label>Print Developer : </label>
+          </div>
+          
+          <div className="">
+          <div className="flex justify-between w-full">
+            <label className="mr-1">Print Developer : </label>
             <input type="checkbox"></input>
           </div>
-        </div>
-        <div className="flex space-x-12 mb-1">
-          <div>
-            <label>Auto GR no. : </label>
+          <div className="flex justify-between w-full">
+            <label className="mr-2">Auto GR no : </label>
             <input type="checkbox"></input>
           </div>
-          <div>
-            <label>Manual Ch no. : </label>
+          <div className="flex justify-between w-full">
+            <label className="mr-1">Manual Ch no. : </label>
             <input type="checkbox"></input>
           </div>
+          </div>
+
           <div>
-            <label>Multi Item : </label>
+          <div className="flex justify-between w-full">
+            <label className="mr-1">Multi Item : </label>
             <input type="checkbox"></input>
           </div>
-          <div>
-            <label>Full Truck Load : </label>
+          <div className="flex justify-between w-full">
+            <label className="mr-1">Full Truck Load : </label>
             <input type="checkbox"></input>
           </div>
-        </div>
-        <div className="flex space-x-12">
-          <div>
-            <label>From Station in Bilty : </label>
+          <div className="flex justify-between w-full">
+            <label className="mr-1">From Station in Bilty : </label>
             <input type="checkbox"></input>
           </div>
+          </div>
+          
           <div>
-            <label>Eway Bill API : </label>
+          <div className="flex justify-between w-full">
+            <label className="mr-1">Eway Bill API : </label>
             <input type="checkbox"></input>
           </div>
-          <div>
-            <label>B/D/A : </label>
-            <select>
+          <div className="flex justify-between w-full">
+            <label className="mr-1">B/D/A : </label>
+            <select className="px-1 rounded-md shadow-md">
               <option>B</option>
               <option>D</option>
               <option>A</option>
             </select>
           </div>
-          <div>
-            <label>B .off : </label>
-            <select>
+          <div className="flex justify-between w-full">
+            <label className="mr-1">B .off : </label>
+            <select className="px-1 rounded-md shadow-md">
               <option>Yes</option>
               <option>No</option>
               <option>Both</option>
             </select>
           </div>
-        </div>
+          </div>
+        
       </div>
 
 
-      <div className="mt-10">
-        <div className="flex space-x-8">
-          <div>
-            <label>Contact Person : </label>
-            <input type="text"></input>
+      <div className="mt-8 flex space-x-14">
+        <div className="">
+          <div className="w-full flex justify-between pb-1">
+            <label className="mr-1">Contact Person : </label>
+            <input className="py-1 px-2 rounded-md shadow-md" type="text"></input>
           </div>
-          <div>
-            <label>Office no. : </label>
-            <input type="text"></input>
-          </div>
-          <div>
-            <label>Phone no. : </label>
-            <input type="text"></input>
-          </div>
-        </div>
-
-        <div className="mt-1 flex space-x-6">
-           <div>
-            <label>Resi. : </label>
-            <input type="text"></input>
+          <div className="w-full flex justify-between pb-1">
+            <label className="mr-1">Resi. : </label>
+            <input className="py-1 px-2 rounded-md shadow-md" type="text"></input>
            </div>
-           <div>
-            <label>Fax No. : </label>
-            <input type="text"></input>
+           <div className="w-full flex justify-between">
+            <label className="mr-1">Domain : </label>
+            <input className="py-1 px-2 rounded-md shadow-md" type="text"></input>
            </div>
         </div>
 
-        <div className="mt-1">
-           <div>
-            <label>Domain : </label>
-            <input type="text"></input>
+        <div className="">
+        <div className="w-full flex justify-between pb-1">
+            <label className="mr-1">Office no. : </label>
+            <input className="py-1 px-2 rounded-md shadow-md" type="text"></input>
+          </div>
+           <div className="w-full flex justify-between pb-1">
+            <label className="mr-1">Fax No. : </label>
+            <input className="py-1 px-2 rounded-md shadow-md" type="text"></input>
            </div>
+        </div>
+
+        <div className="">
+        <div className="w-full flex justify-between pb-1">
+            <label className="mr-1">Phone no. : </label>
+            <input className="py-1 px-2 rounded-md shadow-md" type="text"></input>
+          </div>
         </div>
 
       </div>
